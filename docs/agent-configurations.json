@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-30",
+    "description": "Microsoft Copilot Agent Team Configuration"
+  },
+  "agents": {
+    "orchestrator": {
+      "id": "agent-orchestrator-001",
+      "name": "Orchestrator Agent",
+      "tier": 1,
+      "capabilities": [
+        "routing",
+        "task_decomposition",
+        "coordination"
+      ],
+      "toolkits": [
+        "Microsoft Graph API",
+        "Power Automate",
+        "Dataverse"
+      ],
+      "performance": {
+        "max_parallel_tasks": 6,
+        "timeout_seconds": 30
+      }
+    },
+    "m365_agent": {
+      "id": "agent-m365-002",
+      "name": "Microsoft 365 Agent",
+      "tier": 2,
+      "capabilities": [
+        "email",
+        "calendar",
+        "teams",
+        "sharepoint"
+      ],
+      "toolkits": [
+        "Microsoft Graph API",
+        "Exchange",
+        "Teams",
+        "SharePoint"
+      ]
+    },
+    "data_agent": {
+      "id": "agent-data-003",
+      "name": "Data Analysis Agent",
+      "tier": 2,
+      "capabilities": [
+        "excel",
+        "powerbi",
+        "sql",
+        "visualization"
+      ],
+      "toolkits": [
+        "Power BI API",
+        "Graph Excel",
+        "Dataverse",
+        "Python"
+      ]
+    }
+  }
+}

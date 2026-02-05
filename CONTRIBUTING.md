@@ -102,6 +102,23 @@ We accept contributions in these areas:
    - API documentation
    - Use case examples
    - Translation to other languages
+   - **Documentation maintenance** - Keep docs aligned with Copilot Studio updates (see [DOCS-MAINTENANCE.md](DOCS-MAINTENANCE.md))
+
+### Contributing to Documentation Maintenance
+
+We especially welcome contributions that keep our documentation current with Copilot Studio changes:
+
+**How to Help**:
+1. **Report Outdated Content**: If you notice documentation doesn't match current Copilot Studio UI, [submit an issue](https://github.com/glen200392/microsoft-copilot-agent-team/issues/new?template=documentation-outdated.md)
+2. **Update Documentation**: Submit pull requests to fix outdated screenshots, UI paths, or instructions
+3. **Verify Links**: Check that links to Microsoft documentation are current and working
+4. **Test Procedures**: Follow documentation steps in a live Copilot Studio environment and report discrepancies
+
+**Documentation Update Guidelines**:
+- Include "Last Updated" date with any significant changes
+- Note which Copilot Studio version was used for verification
+- Link to official Microsoft documentation when possible
+- See [DOCS-MAINTENANCE.md](DOCS-MAINTENANCE.md) for detailed guidelines
 
 ---
 

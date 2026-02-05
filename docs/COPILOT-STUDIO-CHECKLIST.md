@@ -6,6 +6,8 @@
 **版本 / Version**: 1.0.0  
 **最後更新 / Last Updated**: 2026年2月 / February 2026
 
+> ⚠️ **Note**: UI elements may change with Copilot Studio updates. See [CHANGELOG.md](../CHANGELOG.md) for version information. [Report discrepancies](https://github.com/glen200392/microsoft-copilot-agent-team/issues/new?template=documentation-outdated.md).
+
 ---
 
 ## 📋 實作前準備 / Pre-Implementation

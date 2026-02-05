@@ -9,6 +9,28 @@
 
 ---
 
+## ⚠️ 重要提示 / Important Notice
+
+> **📌 關於文件版本和 UI 變更 / About Documentation Versions and UI Changes**
+> 
+> **中文**: 本文件基於 2026 年 2 月的 Microsoft Copilot Studio 版本編寫。由於 Microsoft 會定期更新 Copilot Studio 的功能和使用者介面，實際操作畫面可能與文件中的說明略有不同。
+>
+> - ✅ **核心概念和架構**保持不變，仍然適用
+> - ⚠️ **UI 元素**（按鈕位置、選單名稱、畫面配置）可能有所變化
+> - 📚 **最新 UI 資訊**請參考 [Microsoft Copilot Studio 官方文件](https://learn.microsoft.com/microsoft-copilot-studio/)
+> - 🔄 **本專案採用季度更新制度**，每季會審查並更新文件（請參閱 [CHANGELOG.md](../CHANGELOG.md)）
+> - 📝 如發現文件與實際 UI 不符，歡迎[提出 Issue](https://github.com/glen200392/microsoft-copilot-agent-team/issues/new?template=documentation-outdated.md)
+>
+> **English**: This documentation is based on the February 2026 version of Microsoft Copilot Studio. Since Microsoft regularly updates Copilot Studio's features and user interface, the actual UI may differ slightly from what's described in this guide.
+>
+> - ✅ **Core concepts and architecture** remain applicable
+> - ⚠️ **UI elements** (button locations, menu names, screen layouts) may change
+> - 📚 **Latest UI information**: Refer to [Official Microsoft Copilot Studio Documentation](https://learn.microsoft.com/microsoft-copilot-studio/)
+> - 🔄 **Quarterly update policy**: We review and update documentation each quarter (see [CHANGELOG.md](../CHANGELOG.md))
+> - 📝 **Found a discrepancy?** Please [submit an issue](https://github.com/glen200392/microsoft-copilot-agent-team/issues/new?template=documentation-outdated.md)
+
+---
+
 ## 📋 目錄 / Table of Contents
 
 ### 中文版本 (Chinese Version)

@@ -1,0 +1,83 @@
+name: Quarterly Documentation Review Reminder
+
+# This workflow creates a reminder issue for quarterly documentation reviews
+# It runs on the 1st day of February, May, August, and November
+
+on:
+  schedule:
+    # Run at 9:00 AM UTC on February 1st
+    - cron: '0 9 1 2 *'
+    # Run at 9:00 AM UTC on May 1st
+    - cron: '0 9 1 5 *'
+    # Run at 9:00 AM UTC on August 1st
+    - cron: '0 9 1 8 *'
+    # Run at 9:00 AM UTC on November 1st
+    - cron: '0 9 1 11 *'
+  # Allow manual trigger for testing
+  workflow_dispatch:
+
+jobs:
+  create-review-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Determine Quarter
+        id: quarter
+        run: |
+          MONTH=$(date +%-m)
+          YEAR=$(date +%Y)
+          if [ $MONTH -eq 2 ]; then
+            QUARTER="Q1"
+            END_DATE="February 28, $YEAR"
+          elif [ $MONTH -eq 5 ]; then
+            QUARTER="Q2"
+            END_DATE="May 15, $YEAR"
+          elif [ $MONTH -eq 8 ]; then
+            QUARTER="Q3"
+            END_DATE="August 15, $YEAR"
+          elif [ $MONTH -eq 11 ]; then
+            QUARTER="Q4"
+            END_DATE="November 15, $YEAR"
+          fi
+          echo "quarter=$QUARTER" >> $GITHUB_OUTPUT
+          echo "year=$YEAR" >> $GITHUB_OUTPUT
+          echo "end_date=$END_DATE" >> $GITHUB_OUTPUT
+      
+      - name: Create Issue from Template
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const quarter = '${{ steps.quarter.outputs.quarter }}';
+            const year = '${{ steps.quarter.outputs.year }}';
+            const endDate = '${{ steps.quarter.outputs.end_date }}';
+            
+            // Read the template
+            const template = fs.readFileSync('.github/ISSUE_TEMPLATE/quarterly-doc-review.md', 'utf8');
+            
+            // Replace placeholder values
+            const body = template
+              .replace(/\[X\]/g, quarter.substring(1))
+              .replace(/\[Start Date\]/g, new Date().toISOString().split('T')[0])
+              .replace(/\[End Date\]/g, endDate)
+              .replace(/\[Target Date\]/g, endDate)
+              .replace(/\[Current Version as of review\]/g, 'To be determined during review')
+              .replace(/\[Assigned Reviewer\]/g, '@glen200392');
+            
+            const title = `[DOC REVIEW] ${quarter} ${year} Documentation Review`;
+            
+            // Create the issue
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+              labels: ['documentation', 'maintenance']
+            });
+            
+            console.log(`Created quarterly review issue: ${title}`);

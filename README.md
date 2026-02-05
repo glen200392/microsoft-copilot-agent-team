@@ -12,6 +12,32 @@
 
 ---
 
+## 🌟 特別公告 / Special Announcement
+
+### 🚀 完整的 Copilot Studio 實作指南現已推出！ / Complete Copilot Studio Implementation Guide Now Available!
+
+> **中文使用者看這裡！** 想在 Copilot Studio 中建立這個 Agent 團隊嗎？  
+> **Chinese Users!** Want to build this agent team in Copilot Studio?
+
+**📖 查看完整實作指南 / Read the Complete Implementation Guide:**  
+➡️ **[Copilot Studio 實作指南 (中英雙語)](docs/COPILOT-STUDIO-IMPLEMENTATION.md)** ⬅️
+
+本指南包含：
+- ✅ 完整的環境設定步驟
+- ✅ 7 個 Agent 的詳細配置說明
+- ✅ Topics、Entities、Variables 設定範例
+- ✅ Power Automate 整合教學
+- ✅ 測試與疑難排解指引
+
+This guide includes:
+- ✅ Complete environment setup steps
+- ✅ Detailed configuration for all 7 agents
+- ✅ Topics, Entities, and Variables examples
+- ✅ Power Automate integration tutorials
+- ✅ Testing and troubleshooting guides
+
+---
+
 ## 📋 Quick Navigation
 
 | Section | Description |
@@ -229,6 +255,7 @@ Phase 3 - Enterprise Scale (90 days):
 
 | Document | Description | Audience |
 |----------|-------------|----------|
+| [**🚀 Copilot Studio Implementation Guide**](docs/COPILOT-STUDIO-IMPLEMENTATION.md) | **Complete step-by-step guide for building in Copilot Studio (中英雙語)** | **Copilot Studio Admins, Developers** |
 | [Architecture Documentation](docs/architecture-documentation.md) | Technical design, API specs, data flows | Architects, Developers |
 | [Agent Team Design](docs/agent-team-design.md) | Agent roles, prompts, toolkits | Copilot Studio Admins |
 | [Enterprise Guide](docs/ENTERPRISE-GUIDE.md) | Governance, compliance, ROI | IT Leaders, PMO |
